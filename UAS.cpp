@@ -1,35 +1,35 @@
 #include <iostream>
 using namespace std;
-	/*
-	Total Pembelian = x
-	Diskon = y
-	Total Belanja = z
-	Uang konsumen = i
-	*/
-
-float x, y, z, i;
-
-float rumus(float x, float y){
-	return (x - y);
+void rumus (){
+	float total_pembelian, diskon, total_belanja, uang_konsumen;
+	
+	cout << "Masukan total pembelian = ";
+	cin >> total_pembelian;
+	diskon = 0;
+	if (total_pembelian >= 500000){
+		diskon = 0.1 * total_pembelian;
+	}
+	
+	total_belanja = total_pembelian - diskon;
+	
+	cout << endl;
+	cout << "Total diskon		= " << diskon;
+	cout << endl;
+	cout << "Total belanja		= " << total_belanja;
+	cout << endl;
+	cout << "Masukan uang konsumen	= ";
+	cin >> uang_konsumen;
+	cout << "uang kembalian		= " << uang_konsumen - total_belanja << endl;
+	
+	if (total_belanja >= uang_konsumen){
+		cout << "Uangmu kurang bro...";
+		system ("color 4");
+	}else{
+		cout << "Terima kasih bro...";
+		system ("color 3");
+	}
 }
-
-float kembalian(float i, float z){
-	return (i - z);
-}
-
 int main(){
 	
-	cout << "\nMasukan total pembelian\t= "; cin >> x; y = 0; if (x >= 500000){ y = 0.1 * x; }
-	cout << rumus(x, y);
-	z = x-y;
-	
-	cout << "\n\nTotal diskon\t\t= " << y << "\n\nTotal belanja\t\t= " << z << "\n\nMasukan uang konsumen\t= "; cin >> i; cout << "\nUang Kembalian\t\t= " << i - z;
-	cout << kembalian(i, z);
-	
-	
-	if (z > i){ cout << "\n\nUangmu Kurang bro..."; system ("color 4"); }
-	else if (z < i){ cout << "\n\nTerima Kasih bro..."; system ("color 3"); }
-	else if (z == i){ cout << "\n\nUangnya Pas bro..."; system ("color 2"); }
-	
-	return 0;
+	rumus();
 }
