@@ -2,10 +2,10 @@
 using namespace std;
 void rumus (){
 	float tp, d, tb, uk;
-	cout << "Masukan total pembelian = "; cin >> tp; d = 0;
+	cout << "Masukan total pembelian\t= "; cin >> tp; d = 0;
 	if (tp >= 500000){ d = 0.1 * tp; } tb = tp - d;
-	cout << "\n\nTotal diskon		= " << d  << "\n\nTotal belanja		= " << tb << "\n\nMasukan uang konsumen	= "; cin >> uk; cout << "\n\nuang kembalian		= " << uk - tb;
-	if (tb >= uk){ cout << "Uangmu kurang bro..."; system ("color 4"); }
-	else{ cout << "Terima kasih bro..."; system ("color 3"); } }
+	cout << "\n\nTotal diskon\t\t= " << d  << "\n\nTotal belanja\t\t= " << tb << "\n\nMasukan uang konsumen\t= "; cin >> uk; cout << "\n\nuang kembalian\t\t= " << uk - tb;
+	if (tb >= uk){ cout << "\n\nUangmu kurang bro..."; system ("color 4"); }
+	else{ cout << "\n\nTerima kasih bro..."; system ("color 3"); } }
 
 int main(){ rumus(); }
